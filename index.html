@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Reza Tabesh Films</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
     margin: 0;
@@ -12,79 +13,151 @@ body {
     color: white;
 }
 
+.section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
 .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    background: black;
+    padding: 100px 20px 40px;
 }
 
 .hero h1 {
     font-size: 48px;
-    margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 18px;
-    color: #aaa;
 }
 
-.section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
+/* Horizontal video */
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-bottom: 40px;
 }
 
-.services div {
-    margin-bottom: 10px;
+.video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.contact a {
-    color: #00ffcc;
-    text-decoration: none;
+/* Vertical video */
+.vertical-video {
+    width: 300px;
+    margin: 40px auto;
+    position: relative;
+    padding-bottom: 177.78%;
+}
+
+.vertical-video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
-    <div>
-        <h1>Reza Tabesh</h1>
-        <p>Director · Cinematographer · Editor · Drone Pilot</p>
+    <h1>Reza Tabesh</h1>
+    <p>Director · Cinematographer · Editor · Drone Pilot</p>
+</div>
+
+<!-- REEL -->
+<div class="section">
+    <h2>Reel</h2>
+
+    <div class="video">
+        <iframe 
+            src="https://player.vimeo.com/video/1033273198"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
     </div>
 </div>
 
+<!-- SELECTED WORK (HORIZONTAL) -->
+<div class="section">
+    <h2>Selected Work</h2>
+
+    <div class="video">
+        <iframe 
+            src="https://player.vimeo.com/video/VIDEO_ID_2"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="video">
+        <iframe 
+            src="https://player.vimeo.com/video/VIDEO_ID_3"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+<!-- VERTICAL / SOCIAL WORK -->
+<div class="section">
+    <h2>Social / Vertical Work</h2>
+
+    <div class="vertical-video">
+        <iframe 
+            src="https://vimeo.com/showcase/12031146/embed2"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p style="text-align:center; color:#aaa;">
+        Burning Man Field Documentation
+    </p>
+
+</div>
+
+<!-- ABOUT -->
 <div class="section">
     <h2>About</h2>
     <p>
-        I direct, shoot, and edit cinematic video content across documentary,
-        branded work, and social-first storytelling. My work has been featured
-        on CBS, PBS, VICE, Amazon, and global digital platforms.
+        I’m a director, cinematographer, and editor specializing in documentary,
+        drone cinematography, and social-first storytelling.
+    </p>
+    <p>
+        My work has been featured on CBS, PBS, VICE, Amazon, and global platforms,
+        with millions of organic views across Instagram and TikTok.
+    </p>
+    <p>
+        I’ve filmed in 40+ countries, producing cinematic content for brands,
+        artists, and cultural organizations including Burning Man and Sequoia Capital.
     </p>
 </div>
 
-<div class="section services">
-    <h2>Services</h2>
-    <div>• Directing</div>
-    <div>• Cinematography</div>
-    <div>• Drone Filming (FAA Part 107)</div>
-    <div>• Editing & Color Grading</div>
-    <div>• Documentary Production</div>
-    <div>• Social Media Content</div>
-</div>
-
+<!-- CONTACT -->
 <div class="section">
-    <h2>Work</h2>
-    <p>Coming soon — portfolio videos and projects.</p>
-</div>
-
-<div class="section contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:rezatabeshfilms@gmail.com">rezatabeshfilms@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/dadryp" target="_blank">@dadryp</a></p>
+    <p>Email: <a href="mailto:rezatabeshfilms@gmail.com" style="color:#00ffcc;">rezatabeshfilms@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/dadryp" target="_blank" style="color:#00ffcc;">@dadryp</a></p>
 </div>
 
 </body>
