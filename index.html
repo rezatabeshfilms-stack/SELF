@@ -14,18 +14,9 @@ body {
 }
 
 .section {
-    padding: 80px 20px;
+    padding: 70px 20px;
     max-width: 1000px;
     margin: auto;
-}
-
-h1, h2 {
-    margin-bottom: 20px;
-}
-
-p {
-    color: #aaa;
-    line-height: 1.6;
 }
 
 .hero {
@@ -34,109 +25,93 @@ p {
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
+    margin-bottom: 10px;
 }
 
-.hero p {
-    font-size: 18px;
+.hero p, p {
+    color: #aaa;
+    line-height: 1.6;
 }
 
-/* Horizontal video */
-.video {
+.video-horizontal {
     position: relative;
+    width: 100%;
     padding-bottom: 56.25%;
     height: 0;
-    margin-bottom: 40px;
 }
 
-.video iframe {
+.video-horizontal iframe {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
-/* Vertical video */
-.vertical-video {
-    width: 300px;
+.vertical-container {
+    max-width: 360px;
     margin: 40px auto;
-    position: relative;
-    padding-bottom: 177.78%;
 }
 
-.vertical-video iframe {
+.video-vertical {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%;
+    height: 0;
+}
+
+.video-vertical iframe {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+}
+
+a {
+    color: #00ffcc;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
     <h1>Reza Tabesh</h1>
     <p>Director · Cinematographer · Editor · Drone Pilot</p>
 </div>
 
-<!-- REEL -->
 <div class="section">
     <h2>Reel</h2>
-
-    <div class="video">
+    <div class="video-horizontal">
         <iframe 
             src="https://player.vimeo.com/video/1033273198"
             frameborder="0"
-            allow="autoplay; fullscreen"
+            allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen>
         </iframe>
     </div>
+    <p>2024 Drone Reel</p>
 </div>
 
-<!-- SELECTED WORK (HORIZONTAL) -->
 <div class="section">
-    <h2>Selected Work</h2>
+    <h2>Burning Man / Vertical Work</h2>
 
-    <div class="video">
-        <iframe 
-            src="https://player.vimeo.com/video/VIDEO_ID_2"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen>
-        </iframe>
+    <div class="vertical-container">
+        <div class="video-vertical">
+            <iframe 
+                src="https://vimeo.com/showcase/12031146/embed2"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 
-    <div class="video">
-        <iframe 
-            src="https://player.vimeo.com/video/VIDEO_ID_3"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen>
-        </iframe>
-    </div>
-
+    <p style="text-align:center;">Burning Man field documentation and vertical social-first work.</p>
 </div>
 
-<!-- VERTICAL / SOCIAL WORK -->
-<div class="section">
-    <h2>Social / Vertical Work</h2>
-
-    <div class="vertical-video">
-        <iframe 
-            src="https://vimeo.com/showcase/12031146/embed2"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <p style="text-align:center; color:#aaa;">
-        Burning Man Field Documentation
-    </p>
-
-</div>
-
-<!-- ABOUT -->
 <div class="section">
     <h2>About</h2>
     <p>
@@ -153,11 +128,18 @@ p {
     </p>
 </div>
 
-<!-- CONTACT -->
+<div class="section">
+    <h2>Services</h2>
+    <p>
+        Directing · Cinematography · Drone Filming · Documentary Production ·
+        Editing · Color Grading · Social Media Video Strategy · Branded Content
+    </p>
+</div>
+
 <div class="section">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:rezatabeshfilms@gmail.com" style="color:#00ffcc;">rezatabeshfilms@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/dadryp" target="_blank" style="color:#00ffcc;">@dadryp</a></p>
+    <p>Email: <a href="mailto:rezatabeshfilms@gmail.com">rezatabeshfilms@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/dadryp" target="_blank">@dadryp</a></p>
 </div>
 
 </body>
