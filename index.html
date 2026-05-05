@@ -10,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -17,11 +21,67 @@ body {
     color: white;
 }
 
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(7, 7, 7, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    color: #b8b8b8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-button {
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: white;
+    color: black !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
 .section {
     padding: 90px 24px;
     max-width: 1150px;
     margin: auto;
     border-bottom: 1px solid rgba(255,255,255,0.08);
+    scroll-margin-top: 90px;
 }
 
 .hero {
@@ -211,6 +271,16 @@ a {
 }
 
 @media (max-width: 900px) {
+    .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        width: 100%;
+        padding-bottom: 4px;
+    }
+
     .grid-3,
     .metric-boxes,
     .logo-grid,
@@ -234,14 +304,33 @@ a {
 
 <body>
 
-<div class="hero">
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="logo" href="#top">Reza Tabesh</a>
+
+        <div class="nav-links">
+            <a href="#reel">Reel</a>
+            <a href="#performance">Performance</a>
+            <a href="#selected-work">Selected Work</a>
+            <a href="#storytelling">Storytelling</a>
+            <a href="#burning-man">Burning Man</a>
+            <a href="#social-justice">Social Justice</a>
+            <a href="#clients">Clients</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a class="nav-button" href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div id="top" class="hero">
     <h1>Reza Tabesh</h1>
     <p>Cinematic storytelling for startups, brands, founders, and cultural projects.</p>
     <p>I help translate complex ideas into high-impact video content that drives visibility, audience growth, and cultural relevance.</p>
     <a class="cta-button" href="mailto:rezatabeshfilms@gmail.com">Let’s Collaborate</a>
 </div>
 
-<div class="section">
+<div id="reel" class="section">
     <h2>Reel</h2>
     <div class="video-horizontal">
         <iframe src="https://player.vimeo.com/video/1033273198" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -249,7 +338,7 @@ a {
     <p style="text-align:center;">Selected work spanning documentary, branded content, drone cinematography, and social storytelling.</p>
 </div>
 
-<div class="section">
+<div id="performance" class="section">
     <h2>Social Strategy & Performance</h2>
     <p>I apply documentary storytelling, drone cinematography, editing rhythm, and distribution strategy to create short-form content designed for audience growth and cultural impact.</p>
 
@@ -274,7 +363,7 @@ a {
     </div>
 </div>
 
-<div class="section">
+<div id="selected-work" class="section">
     <h2>Selected Work</h2>
 
     <div class="work-item">
@@ -299,7 +388,7 @@ a {
     </div>
 </div>
 
-<div class="section">
+<div id="storytelling" class="section">
     <h2>Storytelling</h2>
     <p>Short-form stories built around place, mood, rhythm, and point of view — designed to hold attention while still feeling cinematic.</p>
 
@@ -329,7 +418,7 @@ a {
     </div>
 </div>
 
-<div class="section">
+<div id="burning-man" class="section">
     <h2>Burning Man</h2>
 
     <div class="grid-3">
@@ -356,7 +445,7 @@ a {
     </div>
 </div>
 
-<div class="section">
+<div id="social-justice" class="section">
     <h2>Social Justice Documentary</h2>
     <p>Documentary work rooted in community, public health, displacement, and Bay Area social issues.</p>
 
@@ -366,7 +455,7 @@ a {
     <p>Doctors Medical Center Documentary</p>
 </div>
 
-<div class="section">
+<div id="clients" class="section">
     <h2>Clients & Platforms</h2>
     <p>Selected organizations, platforms, and companies connected to my production, documentary, branded, and editorial work.</p>
 
@@ -386,7 +475,7 @@ a {
     </div>
 </div>
 
-<div class="section">
+<div id="about" class="section">
     <h2>About</h2>
 
     <div class="about-text">
@@ -402,7 +491,7 @@ a {
     </div>
 </div>
 
-<div class="section">
+<div id="work-with-me" class="section">
     <div class="cta-box">
         <h2>Work With Me</h2>
         <p>I’m available as a hired-gun filmmaker, director, shooter, editor, drone operator, and content strategist for startups, brands, founders, agencies, and cultural organizations.</p>
@@ -411,7 +500,7 @@ a {
     </div>
 </div>
 
-<div class="section">
+<div id="contact" class="section">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:rezatabeshfilms@gmail.com">rezatabeshfilms@gmail.com</a></p>
     <p>Instagram: <a href="https://instagram.com/dadryp" target="_blank">@dadryp</a></p>
