@@ -157,6 +157,27 @@ p {
     max-width: 100% !important;
 }
 
+.storytelling-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.15fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.story-card {
+    background: linear-gradient(180deg, #141414, #0c0c0c);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 24px;
+    padding: 14px;
+}
+
+.story-card.featured {
+    transform: scale(1.06);
+    border: 1px solid rgba(255,255,255,0.22);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
 .logo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -192,11 +213,16 @@ a {
 @media (max-width: 900px) {
     .grid-3,
     .metric-boxes,
-    .logo-grid {
+    .logo-grid,
+    .storytelling-grid {
         grid-template-columns: 1fr;
         max-width: 420px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .story-card.featured {
+        transform: none;
     }
 
     .hero p {
@@ -249,34 +275,6 @@ a {
 </div>
 
 <div class="section">
-    <h2>Storytelling</h2>
-    <p>Short-form stories built around place, mood, rhythm, and point of view — designed to hold attention while still feeling cinematic.</p>
-
-    <div class="grid-3">
-        <div>
-            <div class="video-vertical">
-                <iframe src="https://player.vimeo.com/video/1148147516" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="caption">Forth Point</p>
-        </div>
-
-        <div>
-            <div class="video-vertical">
-                <iframe src="https://player.vimeo.com/video/1061484728" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="caption">Ba Na Hillz</p>
-        </div>
-
-        <div>
-            <div class="video-vertical">
-                <iframe src="https://player.vimeo.com/video/1061484643" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="caption">North Star Tahoe</p>
-        </div>
-    </div>
-</div>
-
-<div class="section">
     <h2>Selected Work</h2>
 
     <div class="work-item">
@@ -288,9 +286,9 @@ a {
 
     <div class="work-item">
         <div class="video-horizontal">
-            <iframe src="https://player.vimeo.com/video/880723709" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/711397539" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <p>WCOE — San Diego 2023</p>
+        <p>Destination SF — The Green Door of Life</p>
     </div>
 
     <div class="work-item">
@@ -298,6 +296,36 @@ a {
             <iframe src="https://player.vimeo.com/video/96454351" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p>Wasted — A Mixed Media Art Installation</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Storytelling</h2>
+    <p>Short-form stories built around place, mood, rhythm, and point of view — designed to hold attention while still feeling cinematic.</p>
+
+    <div class="storytelling-grid">
+
+        <div class="story-card">
+            <div class="video-vertical">
+                <iframe src="https://player.vimeo.com/video/1061484728" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="caption">Ba Na Hillz</p>
+        </div>
+
+        <div class="story-card featured">
+            <div class="video-vertical">
+                <iframe src="https://player.vimeo.com/video/1148147516" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="caption">Forth Point</p>
+        </div>
+
+        <div class="story-card">
+            <div class="video-vertical">
+                <iframe src="https://player.vimeo.com/video/1061484643" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="caption">North Star Tahoe</p>
+        </div>
+
     </div>
 </div>
 
